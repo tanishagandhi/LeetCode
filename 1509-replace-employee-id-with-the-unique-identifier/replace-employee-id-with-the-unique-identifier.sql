@@ -1,1 +1,1 @@
-select b.unique_id,e.name from Employees as e left join EmployeeUNI as b on e.id=b.id;
+select u.unique_id,e.name from Employees as e left join EmployeeUNI as u on e.id=u.id;
