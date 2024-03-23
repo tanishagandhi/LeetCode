@@ -3,4 +3,5 @@
 
 select a.name from Employee as a 
 join Employee as b 
-on a.id=b.managerId group by a.id having COUNT(b.managerId) >= 5;
+on a.id=b.managerId
+group by a.id having COUNT(b.managerId) >= 5;
