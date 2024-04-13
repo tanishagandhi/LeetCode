@@ -1,4 +1,22 @@
-// APPROACH 1:OPTIMAL
+// APPROACH 1: BETTER
+class Solution {
+public:
+    int missingNumber(vector<int>& nums) {
+        int n=nums.size();
+        vector <int> hash(n+1,0);
+        for(int i=0;i<n;i++){
+            hash[nums[i]]++;
+        }
+        for(int i=0;i<hash.size();i++){
+            if(hash[i]==0){
+                return i;
+            }
+        }
+        return 0;
+    }
+};
+
+// APPROACH 2:OPTIMAL
 // class Solution {
 // public:
 //     int missingNumber(vector<int>& nums) {
@@ -15,16 +33,10 @@
 //     }
 // };
 
-// APPROACH 2:MORE OPTIMAL
-class Solution {
-public:
-    int missingNumber(vector<int>& nums) {
-        int xor2=0;
-        int xor1=0;
-        for(int i=0;i<nums.size();i++){
-            xor1=xor1^(i+1);
-            xor2=xor2^nums[i];
-        }
-        return xor1^xor2;
-    }
-};
+// APPROACH 3:MORE OPTIMAL
+// class Solution {
+// public:
+//     int missingNumber(vector<int>& nums) {
+// 
+//     }
+// };
