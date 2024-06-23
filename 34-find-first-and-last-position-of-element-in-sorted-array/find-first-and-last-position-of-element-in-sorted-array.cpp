@@ -34,8 +34,8 @@ public:
     }
     vector<int> searchRange(vector<int>& nums, int target) {
         int n=nums.size();
-        int l=lowerbound(nums, target);
-        if(l==n || nums[l]!=target) return {-1,-1};
-        else return {l,(upperbound(nums, target)-1)};
+        int lb=lowerbound(nums, target);
+        if(lb==n || nums[lb]!=target) return {-1,-1};
+        else return {lb,(upperbound(nums, target)-1)};
     }
 };
