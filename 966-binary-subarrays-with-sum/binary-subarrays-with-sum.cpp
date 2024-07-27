@@ -5,9 +5,9 @@ public:
         return atMost(nums, goal) - atMost(nums, goal - 1);
     }
     int atMost(vector<int>& nums, int goal) {
+        if(goal<0) return 0;
         int l=0,r=0,cnt=0,sum=0;
         while(r<nums.size()){
-            if(goal<0) return 0;
             sum+=nums[r];
             while(sum>goal){
                 sum=sum-nums[l];
