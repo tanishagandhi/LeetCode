@@ -6,7 +6,7 @@ public:
         while(r<s.size()){
             mpp[s[r]-'A']++;
             maxf=max(maxf,mpp[s[r]-'A']);
-            while((r-l+1)-maxf>k){
+            if((r-l+1)-maxf>k){
                 mpp[s[l]-'A']--;
                 l=l+1;
             }
